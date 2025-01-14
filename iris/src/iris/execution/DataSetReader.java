@@ -14,19 +14,6 @@ public class DataSetReader {
 			}
 			return inputReader;
 	}
-//	 public static Instances readDataFile(String filename) {
-//	        Instances data = null;
-//	        try {
-//	            // Load the dataset using Weka's DataSource
-//	            DataSource dataSource = new DataSource(filename);
-//	            data = dataSource.getDataSet();
-//	        } catch (Exception ex) {
-//	            // Handle errors (e.g., file not found)
-//	            System.err.println("Error reading file: " + filename);
-//	            ex.printStackTrace();
-//	        }
-//	        return data;
-//	    }
 
 	    public static void main(String[] args) {
 	    	Leggidataset datafile = WekaUtilis.readDataFile("/User/nero/Desktop/iris.arff");
@@ -169,27 +156,6 @@ public class DataSetReader {
 	    		 "FPR 2 - " + String.format("%.2f%%", avgTotalFP2)+"\n"+
 	    		 "Accuracy - " + String.format("%.2f%%", avgAccuracy)+"\n"
 	    		 );
-//	        // Specify the path to the dataset
-//	        String filepath = "/User/nero/Desktop/iris.arff";  // Adjust to your file's path
-//
-//	        // Read the dataset
-//	        Instances data = readDataFile(filepath);
-//
-//	        // If the dataset is successfully loaded
-//	        if (data != null) {
-//	            // Set the class index (usually the last column in a classification problem)
-//	            data.setClassIndex(data.numAttributes() - 1);
-//
-//	            // Randomize the dataset (to avoid order bias)
-//	            data.randomize(new java.util.Random());
-//
-//	            // Print some basic details about the dataset
-//	            System.out.println("Dataset loaded and randomized successfully!");
-//	            System.out.println("Number of instances: " + data.numInstances());
-//	            System.out.println("Class attribute: " + data.classAttribute().name());
-//	        } else {
-//	            System.out.println("Failed to load the dataset.");
-//	        }
 	        
 	    }
 }
